@@ -1,91 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>DMP Implementation</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>DMP Implementation</title>
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
-        <button id="addToCar" class="buttons">Agregar a carrito</button>
-        <div class="form-container">
-            <h2>Formulario de contacto</h2>
-            <form action="">
-                <div class="form-container-item">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name">
-                </div>
-                <div class="form-container-item">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email">
-                </div>
-                    
-                    <button  type="submit" id="submitForm" class="buttons">Enviar</button> 
-            </form>
-            
-        </div>
-        
-    <iframe
-        src="" 
-        name= '__bkframe'
-        altura = '0'
-        ancho= '0'
-        frameborder = "0"
-        style = "display: none; position: absolute; clip: rect (0px 0px 0px 0px)"
-        src = "about: blank"> 
-    </iframe> 
-     <script type = "text/javascript"src = "https://tags.bkrtx.com/js/bk-coretag.js"></script>
-     <script type = "text/javascript">
-
-
+       <button id="addToCar" class="buttons">Agregar a carrito</button><br>
+       <div class="form-container">
+           <h2>Formulario de contacto</h2>
+           <form id="myform" action="">
+               <div class="form-container-item">
+                       <label for="phone">Phone:</label>
+                       <input type="text" id="number">
+               </div>
+               <div class="form-container-item">
+                       <label for="email">Email:</label>
+                       <input type="email" id="email">
+               </div>
+                   <button  type="submit" id="submitForm" class="buttons">Enviar</button>
+           </form>
+       </div>
+           <iframe name="__bkframe" height="0" width="0" frameborder="0" src="javascript:void(0)"></iframe>
+           <script type="text/javascript" src="http://tags.bkrtx.com/js/bk-coretag.js"></script>
+           <script type="text/javascript">
+             function submitForm() { }
+               let form = document.getElementById('myform');
+               form.addEventListener('submit', function () {
+                   event.preventDefault();
+                   var phone = form.elements['number'].value;
+                   //console.log(phone)
+                   var email = form.elements['email'].value;
+                   //console.log(email)
+                   if(email && phone){
+                       bk_addEmailHash(email);
+                       bk_addPhoneHash(phone);
+                       bk_doJSTag(251418, 1);
+                   }else {
+                       alert("Informaciòn incorrecta")
+                   }
+               });
+           </script>
+   <!--Click en botón de Carrito -->
+   <script type = "text/javascript">
+   if (typeof addEventListener != "undefined"){
      document.getElementById('addToCar').addEventListener('click', function () {
-        console.log("one was clicked");
-        //bk_addPageCtx ('Clave', 'Valor');
-        //bk_doJSTag (15415, 1); 
-    });
-const validate = ()=>{
-    let namelInput = document.getElementById('name');
-        namelInput.addEventListener('keyup', function (){
-        let name = this.value;
-        console.log(name)
-        });
-
-        let emailInput = document.getElementById('email');
-        emailInput.addEventListener('keyup', function (){
-        let email = event.target.value;
-        console.log(email);
-        });
-}
-    
-function submitForm(){}    
-let submitEvent = document.getElementById('submitForm');
-validate();
-    submitEvent.addEventListener('submit', function() {
-        event.preventDefault();
-      
-});
-        
-    
-        
-
-       
-    
-
-        
-  
-        
-        
-    </script>
-             
-            
-    
-        
-            
-           
-        
-    
+       var bk_event_handler_pixel = new Image();
+       bk_event_handler_pixel.src="https://stags.bluekai.com/site/siteID?phint=event%3DAddToCar";
+       console.log("one was clicked");
+     }, false);
+   } else {
+       document.getElementById('addToCar').attachEvent('onclick', function (){
+           var bk_event_handler_pixel = newImage();
+           bk_event_handler_pixel.src="https://stags.bluekai.com/site/siteID?phint=event%3DAddToCar";
+   });
+   };
+   </script>
+   <!--Finaliza click en botón de Carrito -->
 </body>
 </html>
