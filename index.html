@@ -1,35 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>DMP Implementation</title>
-   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    <h1>Prueba BlueKai Tag Implementation</h1>
-    <h3>Abre la consola y pulsa el botón agregar carrito</h3>
-       <button id="addToCar" class="buttons">Agregar a carrito</button><br>
-       <div class="form-container">
-           <h2>Formulario de contacto</h2>
-           <form id="myform" action="">
-               <div class="form-container-item">
-                       <label for="phone">Phone:</label>
-                       <input type="text" id="number">
-               </div>
-               <div class="form-container-item">
-                       <label for="email">Email:</label>
-                       <input type="email" id="email">
-               </div>
-                   <button  type="submit" id="submitForm" class="buttons">Enviar</button>
-           </form>
-       </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DMP Implementation</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Prueba BlueKai Tag Implementation</h1>
+    </header>
+    <main>
+      <h3>Abre la consola y pulsa el botón agregar carrito</h3>
+      <section class="car-container">
+          <img class="car-container-img" src="https://http2.mlstatic.com/termo-cafe-te-chocolate-acero-inoxidable-17-oz-antifugas-D_NQ_NP_871402-MLM30581095618_052019-F.jpg" alt="">
+          <p>Termo para café</p>
+          <p>Descripciòn del artículo</p>
+        <button id="addToCar" class="buttons">Agregar a carrito</button>
+      </section>
+    </main>
+    <h3 class="footer-title">Déjanos tus datos para enviarte nuestras promociones</h3>
+      <footer>
+            <div class="form-container">
+                    <form id="myform" action="">
+                        <h2 class="fortm-title">Contacto</h2>
+                      <div class="form-container-item">
+                        <i class="fas fa-phone-square-alt"></i>
+                        <label for="phone">Teléfono:</label>
+                        <input type="text" id="number" />
+                      </div>
+                      <div class="form-container-item">
+                        <i class="fas fa-envelope-square"></i>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" />
+                      </div>
+                      <div class="form-container-item">
+                        <button type="submit" id="submitForm" class="buttons">Enviar</button>
+                      </div>
+                      
+                    </form>
+            </div>
+      </footer>
 
-           <iframe name="__bkframe" height="0" width="0" frameborder="0" src="javascript:void(0)"></iframe>
-           <script type="text/javascript" src="http://tags.bkrtx.com/js/bk-coretag.js"></script>
-           <script type="text/javascript" src="index.js"></script>
-   
-</body>
+    <iframe name="__bkframe" height="0" width="0" frameborder="0" src="javascript:void(0)"></iframe>
+    <script type="text/javascript" src="http://tags.bkrtx.com/js/bk-coretag.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script src="https://kit.fontawesome.com/86b865f2d2.js" crossorigin="anonymous"></script>
+  </body>
 </html>

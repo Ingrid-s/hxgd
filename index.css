@@ -1,10 +1,51 @@
+body{
+    margin: 0;
+    padding: 0;
+}
 body *{
     font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header{
+    height: 80px;
+    width: 100vw;
+    background: linear-gradient(#1b1b1b,rgb(18, 121, 238));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+h1, h3, h2{
+    text-align: center;
+    color: rgb(242, 244, 247);   
+}
+h3 {
+    margin: 15px;
+    color:   rgb(37, 132, 240);
+}
+main {
+    height: 60%;
+}
+.car-container{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    flex-wrap: wrap;
+    
+    
+}
+.car-container-img{
+    width: 200px;
+    height: auto;
 }
 .buttons{
     width: 150px;
     height: 40px;
-    background-color: rgb(56, 148, 13);
+    background-color: #24b1e9be;
     border: none;
     border-radius: 20px;
     margin: 10px;
@@ -14,13 +55,48 @@ body *{
     outline: none;
 }
 .buttons:hover{
-    background-color: rgb(252, 153, 5);
+    background-color: rgb(173, 47, 68);
 }
 .form-container{
-    border: 1px solid blue;
+    display: flex;
     border-radius: 8px;
     padding: 10px;
 }
-.form-container-item{
-    margin-bottom: 5px;
+#myform{
+display: flex;
+justify-content: space-evenly;
+align-items: center;
 }
+.fortm-title{
+    margin-right: 20px;
+}
+input {
+    margin-right: 20px;
+}
+footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    background: linear-gradient(rgb(66, 145, 235),#1b1b1bf5);
+    color: #fff;
+    flex-wrap: wrap;
+}
+.footer-title{
+text-align: start;
+}
+.fas{
+    width: 30px;
+}
+@media screen and (max-width: 500px) {
+    body*{
+        font-size: 10px;
+    }
+    #myform{
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        }
+    .form-container-item{
+        margin-bottom: 5px;
+    }
+   
+  }
