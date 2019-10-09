@@ -9,6 +9,8 @@
    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <h1>Prueba BlueKai Tag Implementation</h1>
+    <h3>Abre la consola y pulsa el botón agregar carrito</h3>
        <button id="addToCar" class="buttons">Agregar a carrito</button><br>
        <div class="form-container">
            <h2>Formulario de contacto</h2>
@@ -24,41 +26,10 @@
                    <button  type="submit" id="submitForm" class="buttons">Enviar</button>
            </form>
        </div>
+
            <iframe name="__bkframe" height="0" width="0" frameborder="0" src="javascript:void(0)"></iframe>
            <script type="text/javascript" src="http://tags.bkrtx.com/js/bk-coretag.js"></script>
-           <script type="text/javascript">
-             function submitForm() { }
-               let form = document.getElementById('myform');
-               form.addEventListener('submit', function () {
-                   event.preventDefault();
-                   var phone = form.elements['number'].value;
-                   //console.log(phone)
-                   var email = form.elements['email'].value;
-                   //console.log(email)
-                   if(email && phone){
-                       bk_addEmailHash(email);
-                       bk_addPhoneHash(phone);
-                       bk_doJSTag(251418, 1);
-                   }else {
-                       alert("Informaciòn incorrecta")
-                   }
-               });
-           </script>
-   <!--Click en botón de Carrito -->
-   <script type = "text/javascript">
-   if (typeof addEventListener != "undefined"){
-     document.getElementById('addToCar').addEventListener('click', function () {
-       var bk_event_handler_pixel = new Image();
-       bk_event_handler_pixel.src="https://stags.bluekai.com/site/siteID?phint=event%3DAddToCar";
-       console.log("one was clicked");
-     }, false);
-   } else {
-       document.getElementById('addToCar').attachEvent('onclick', function (){
-           var bk_event_handler_pixel = newImage();
-           bk_event_handler_pixel.src="https://stags.bluekai.com/site/siteID?phint=event%3DAddToCar";
-   });
-   };
-   </script>
-   <!--Finaliza click en botón de Carrito -->
+           <script type="text/javascript" src="index.js"></script>
+   
 </body>
 </html>
